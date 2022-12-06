@@ -1,5 +1,10 @@
-package gb.oop.hw.data.person;
+package gb.oop.hw.data;
 
+import java.util.Objects;
+
+/**
+ * Персона содержит имя и характеристику.
+ */
 public class Person {
     private String name;
     private String notes;
@@ -14,10 +19,26 @@ public class Person {
     }
 
     @Override
-    public String toString() {
-        return String.format("[%s - ]")
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(name, person.name) && Objects.equals(notes, person.notes);
+    }
 
-                "[" + name + ' - ' + notes;
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, notes);
+    }
+
+    @Override
+    public String toString() {
+        if (this.notes.isEmpty()) {
+            return String.format("[%s]", this.name);
+        }
+        else {
+            return String.format("[%s, %s]", this.name, this.notes);
+        }
     }
 
     public String getName() {
