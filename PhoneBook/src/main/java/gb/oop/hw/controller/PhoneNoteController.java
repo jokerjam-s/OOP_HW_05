@@ -1,2 +1,4 @@
-package gb.oop.hw.controller;public class PhoneNoteController {
+package gb.oop.hw.controller;
+
+public class PhoneNoteController {
 }
