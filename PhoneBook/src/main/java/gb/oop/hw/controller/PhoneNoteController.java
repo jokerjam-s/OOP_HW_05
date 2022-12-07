@@ -1,4 +1,12 @@
 package gb.oop.hw.controller;
 
-public class PhoneNoteController {
+import gb.oop.hw.services.PhoneNoteServiceImpl;
+
+import java.util.logging.Logger;
+
+public interface PhoneNoteController {
+    PhoneNoteServiceImpl service = new PhoneNoteServiceImpl();
+
+
+
 }

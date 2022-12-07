@@ -5,8 +5,20 @@ import java.util.List;
 import java.util.Objects;
 
 public class PhoneNote <P extends Person, T extends Phone> {
-    P person;
-    List<T> phonesList;
+    private P person;
+    private List<T> phonesList;
+
+    public void addPhone(T phone){
+        phonesList.add(phone);
+    }
+
+    public void deletePhone(T phone){
+        phonesList.remove(phone);
+    }
+
+    public void deletePhone(int index){
+        phonesList.remove(index);
+    }
 
     public PhoneNote(P person, List<T> phonesList) {
         this.person = person;

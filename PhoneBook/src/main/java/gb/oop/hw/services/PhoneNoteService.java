@@ -7,8 +7,10 @@ import gb.oop.hw.data.PhoneNote;
 import java.util.List;
 
 public interface PhoneNoteService <P extends Person, N extends Phone> {
-    PhoneNote newPhoneNote(P person, List<N> phones);
-    PhoneNote newPhoneNote(P person);
+    List<PhoneNote> newPhoneNote(int count);
     void addPhone(PhoneNote phoneNote, Phone phone);
     void deletePhone(PhoneNote phoneNote, Phone phone);
+    PhoneNote getRecord(int index);
+    PhoneNote getRecord(String personName);
+
 }

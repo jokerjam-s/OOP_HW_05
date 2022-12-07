@@ -1,2 +1,5 @@
-package gb.oop.hw.controller;public class PhoneNoteControllerImpl {
+package gb.oop.hw.controller;
+
+public class PhoneNoteControllerImpl implements PhoneNoteController{
+
 }

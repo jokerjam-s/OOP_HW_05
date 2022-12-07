@@ -12,4 +12,20 @@ public class ReadWritePhoneBookImpl implements ReadWritePnoneBook{
     public PhoneNote readFromFile(String fileName, String format) {
         return null;
     }
+
+    private void WriteToJson(){
+
+    }
+
+    private void WriteToXml(){
+
+    }
+
+    public PhoneNote readFromJson(){
+       return null;
+    }
+
+    public PhoneNote readFromXml(){
+        return null;
+    }
 }
