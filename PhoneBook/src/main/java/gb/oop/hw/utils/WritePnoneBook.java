@@ -4,7 +4,6 @@ import gb.oop.hw.data.PhoneNote;
 
 import java.util.List;
 
-public interface ReadWritePnoneBook <P extends PhoneNote>{
+public interface WritePnoneBook <P extends PhoneNote>{
     void writeToFile(List<P> phones, String fileName, String format);
-    List<P> readFromFile(String fileName, String format);
 }
