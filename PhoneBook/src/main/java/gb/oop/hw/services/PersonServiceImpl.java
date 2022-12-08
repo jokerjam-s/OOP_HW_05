@@ -37,6 +37,6 @@ public class PersonServiceImpl implements PersonService{
     public Person generatePerson() {
         Random random =new Random();
 
-        return new Person(personNames[random.nextInt(personNames.length)], personNames[random.nextInt(personNotes.length)]);
+        return new Person(personNames[random.nextInt(personNames.length)], personNotes[random.nextInt(personNotes.length)]);
     }
 }

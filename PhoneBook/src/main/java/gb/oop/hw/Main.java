@@ -8,6 +8,14 @@ public class Main {
 
         controller.createPhoneNote(10);
 
+        controller.showPhones();
+
         controller.saveToFile("Phones.json", "json");
+        controller.saveToFile("Phones.txt", "txt");
+
+        controller.showPhones("Мария");
+
+
+
     }
 }

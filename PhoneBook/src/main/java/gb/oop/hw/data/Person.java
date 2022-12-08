@@ -18,6 +18,9 @@ public class Person {
         this(name,"");
     }
 
+    public Person() {
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -5,3 +5,10 @@
 
 - в файле на одной строке хранится одна часть записи, пустая строка - разделитель
 
+Скриншот 
+
+!["Скрин"](ScreenShots/oop_01.png "Screen Shots")
+
+!["Скрин"](ScreenShots/oop_02.png "Screen Shots")
+
+!["Скрин"](ScreenShots/oop_03.png "Screen Shots")

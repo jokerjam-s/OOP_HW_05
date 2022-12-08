@@ -6,12 +6,16 @@ import gb.oop.hw.data.PhoneNote;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PhoneNoteServiceImpl implements PhoneNoteService{
     private List<PhoneNote> phoneNotes = new ArrayList<>();
     private final PhoneServiceImpl phoneService = new PhoneServiceImpl();
     private final PersonServiceImpl personService = new PersonServiceImpl();
 
+    public void setPhoneNotes(List<PhoneNote> phoneNotes) {
+        this.phoneNotes = phoneNotes;
+    }
 
     @Override
     public List<PhoneNote> getPhoneNote() {
@@ -59,11 +63,13 @@ public class PhoneNoteServiceImpl implements PhoneNoteService{
     }
 
     @Override
-    public PhoneNote getRecord(String personName) {
-        PhoneNote phoneNote = phoneNotes.stream()
-                .filter(e -> e.getPerson().getName().equals(personName))
-                .findFirst().get();
-
-        return phoneNote;
+    public List<PhoneNote> getRecords(String personName) {
+        if(personName.isEmpty()){
+            return this.phoneNotes;
+        }else {
+            return phoneNotes.stream()
+                    .filter(e -> e.getPerson().getName().equals(personName))
+                    .collect(Collectors.toList());
+        }
     }
 }

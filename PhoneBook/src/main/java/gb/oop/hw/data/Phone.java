@@ -18,6 +18,9 @@ public class Phone {
         this("", number);
     }
 
+    public Phone() {
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

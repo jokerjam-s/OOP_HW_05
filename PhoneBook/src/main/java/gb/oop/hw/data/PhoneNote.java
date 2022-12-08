@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class PhoneNote <P extends Person, T extends Phone> implements Serializable {
+public class PhoneNote <P extends Person, T extends Phone> {
     private P person;
     private List<T> phonesList;
+
+
 
     public void addPhone(T phone){
         phonesList.add(phone);
@@ -28,6 +30,9 @@ public class PhoneNote <P extends Person, T extends Phone> implements Serializab
 
     public PhoneNote(P person) {
         this(person, new ArrayList<T>());
+    }
+
+    public PhoneNote(){
     }
 
     @Override

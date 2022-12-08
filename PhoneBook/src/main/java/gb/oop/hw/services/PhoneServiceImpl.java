@@ -18,7 +18,7 @@ public class PhoneServiceImpl implements PhoneService {
     public Phone generateNumber() {
         Random random = new Random();
 
-        String builder = "+7 (" + random.nextInt(10) +
+        String phoneNumber = "+7 (" + random.nextInt(10) +
                 random.nextInt(10) +
                 random.nextInt(10) +
                 ")" +
@@ -32,6 +32,6 @@ public class PhoneServiceImpl implements PhoneService {
                 random.nextInt(10) +
                 random.nextInt(10);
 
-        return new Phone(phoneNote[random.nextInt(phoneNote.length)], builder);
+        return new Phone(phoneNote[random.nextInt(phoneNote.length)], phoneNumber);
     }
 }

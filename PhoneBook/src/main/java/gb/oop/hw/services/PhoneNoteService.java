@@ -11,7 +11,7 @@ public interface PhoneNoteService <P extends Person, N extends Phone> {
     void addPhone(PhoneNote phoneNote, Phone phone);
     void deletePhone(PhoneNote phoneNote, Phone phone);
     PhoneNote getRecord(int index);
-    PhoneNote getRecord(String personName);
+    List<PhoneNote> getRecords(String personName);
     List<PhoneNote> getPhoneNote();
 
 }
