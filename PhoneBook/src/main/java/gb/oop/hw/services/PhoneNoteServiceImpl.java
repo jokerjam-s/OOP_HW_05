@@ -14,18 +14,40 @@ public class PhoneNoteServiceImpl implements PhoneNoteService{
 
 
     @Override
+    public List<PhoneNote> getPhoneNote() {
+        return phoneNotes;
+    }
+
+    /**
+     * Генерация телефонного справочника
+     * @param count кол-во абонентов в справочнике
+     * @return
+     */
+    @Override
     public List<PhoneNote> newPhoneNote(int count) {
         for (int i = 0; i < count; i++) {
-            this.phoneNotes.add(new PhoneNote(this.personService.generatePerson(), (List) this.phoneService.generateNumber()));
+            List<Phone> phones = new ArrayList<>();
+            phones.add(this.phoneService.generateNumber());
+            this.phoneNotes.add(new PhoneNote(this.personService.generatePerson(), phones ));
         }
         return this.phoneNotes;
     }
 
+    /**
+     * Добавленеи телефона к абоненту
+     * @param phoneNote
+     * @param phone
+     */
     @Override
     public void addPhone(PhoneNote phoneNote, Phone phone) {
         phoneNote.addPhone(phone);
     }
 
+    /**
+     * Удаленеи телефона
+     * @param phoneNote - запись справочника из которой удаляется телефон
+     * @param phone     - удаляемый телефон
+     */
     @Override
     public void deletePhone(PhoneNote phoneNote, Phone phone) {
         phoneNote.deletePhone(phone);

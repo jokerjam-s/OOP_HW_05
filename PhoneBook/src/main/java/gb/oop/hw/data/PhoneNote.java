@@ -1,10 +1,11 @@
 package gb.oop.hw.data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class PhoneNote <P extends Person, T extends Phone> {
+public class PhoneNote <P extends Person, T extends Phone> implements Serializable {
     private P person;
     private List<T> phonesList;
 
